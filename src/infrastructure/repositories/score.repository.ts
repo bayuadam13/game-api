@@ -17,7 +17,7 @@ export class ScoreRepository {
 
   getLeaderboard() {
     return this.repo.find({
-      order: { score: 'DESC' },
+      order: { value: 'DESC' },
       take: 10,
       relations: ['user']
     });
